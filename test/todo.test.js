@@ -16,8 +16,28 @@ describe('todo', () => {
             expect(result).to.be.not.ok
         })
 
-        it('should return invalid when creating an object using the "when" property invalid')
+        it('should return invalid when creating an object using the "when" property invalid', () => {
+            const data = {
+                text: 'Hellow World',
+                when: new Date("20-12-01")
+            }
 
-        it('should have "id", "text", "when" and "status" properties after creating object')
+            const todo = new Todo(data)
+            const result = todo.isValid()
+
+            expect(result).to.be.not.ok
+        })
+
+        it('should have "id", "text", "when" and "status" properties after creating object', () => {
+            const data = {
+                text: 'Hellow World',
+                when: new Date("2020-12-01")
+            }
+
+            const todo = new Todo(data)
+            const result = todo.isValid()
+
+            expect(result).to.be.ok
+        })
     })
 })

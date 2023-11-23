@@ -10,7 +10,7 @@ class Todo {
     }
 
     isValid() {
-        return !!this.text
+        return !!this.text && !isNaN(this.when.valueOf())
     }
 }
 
