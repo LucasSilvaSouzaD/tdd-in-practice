@@ -1,0 +1,29 @@
+{
+  "name": "tdd-in-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --parallel --exit test/",
+    "test:dev": "npx mocha test/ -w",
+    "test:cov": "npx nyc --reportes=html,text npm test"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasSilvaSouzaD/tdd-in-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasSilvaSouzaD/tdd-in-practice/issues"
+  },
+  "homepage": "https://github.com/LucasSilvaSouzaD/tdd-in-practice#readme",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.4"
+  }
+}
